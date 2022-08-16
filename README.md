@@ -5,6 +5,8 @@ Using Petfinder API, displays a random "Pup_up" for adoption near you.
 ***You need to enter your own API credentials to try this code.***
 [You can get creditials for free here.](https://www.petfinder.com/developers/v2/docs/#using-the-api)
 
+***Update 8/16: I updated the file slightly after reading up on some PEP 8, and noticed I forgot to add my error for an invalid zipcode. I added a feature to save pups to an SQL DB from the user interface. I plan to add an option to see dogs you've saved for those without SQL installed. ***
+
 This was my first original program using Object Oriented Programming. I initially wrote it in procedural/functional programming and challeneged myself to translate it to OOP, which cut 50 lines and made it much easier to read. 
 
 With this project I learned how to use an API with a token, how to display photos from an API and augmented my knowledge of OOP by creating this from scratch. 
