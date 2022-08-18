@@ -157,7 +157,7 @@ class Root(tk.Tk):
         saved.close()
 
     def create_new_window(self):
-        """Create new window to view database""" # todo, add a remove function breakdown into create window and call dogs
+        """Create new window to view database"""
         top= tk.Toplevel(self)
         top.title("Your Saved Pups")
         main_frame = tk.Frame(top, width=500, height=500)
