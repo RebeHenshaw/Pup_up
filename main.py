@@ -9,7 +9,6 @@ import sqlite3
 import html
 from datetime import date
 
-
 class Dog:
 
     @staticmethod
@@ -60,7 +59,6 @@ class Dog:
         except: # Exeption occurs if no images of dog provided.
             self.image1 = self.get_pic(self.image_index, False)
 
-
     def get_pic(self, index, image = True):
         """Get photo of dog based on index."""
         if image:
@@ -109,7 +107,6 @@ class Dog:
             description text,
             link text,
             UNIQUE(link))""")
-
         c.execute("INSERT OR IGNORE INTO dogs VALUES (:date, :name, :breed, :location_city, :location_state, :description, :link)",
         {'date': date.today(),
         'name': self.base['name'],
@@ -125,9 +122,9 @@ class Dog:
 class Root(tk.Tk):
 
     def __init__(self):
-        """Create and place initial window and buttons."""
+        """Create and place initial window and button."""
         tk.Tk.__init__(self)
-        self.winfo_toplevel().title("Random Pop-Up!")
+        self.winfo_toplevel().title("Random Pup-Up!")
         self.title2 = tk.Label(text = 'A random pup up for\nadoption near you!', font = ("Courier", 14, "bold"))
         self.title2.grid(row=0, column = 1, pady = (10,0), padx = 10)
         self.zip_label = tk.Label(text = "Enter your 5-digit\nzipcode", font = ("Courier", 11))
@@ -157,7 +154,7 @@ class Root(tk.Tk):
         saved.close()
 
     def create_new_window(self):
-        """Create new window to view database"""
+        """Create new window with scrollbar to view database."""
         top= tk.Toplevel(self)
         top.title("Your Saved Pups")
         main_frame = tk.Frame(top, width=500, height=500)
